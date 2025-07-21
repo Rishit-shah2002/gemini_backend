@@ -1,0 +1,52 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# FastAPI / Uvicorn logs
+*.log
+
+# VSCode and IDE settings
+.vscode/
+.idea/
+*.swp
+
+# Environment variables
+.env
+.env.*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Coverage and testing
+.coverage
+htmlcov/
+.tox/
+nosetests.xml
+pytest_cache/
+.cache/
+
+# Redis dump files (if any)
+dump.rdb
+
+# Migrations (if not tracked)
+alembic/
+migrations/
+
+# Python notebooks
+*.ipynb
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Worker logs / queues
+rq_worker.log
