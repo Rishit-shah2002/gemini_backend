@@ -5,7 +5,7 @@ from app.db.database import SessionLocal
 
 stripe.api_key = os.getenv("STRIPE_SECRET_KEY")
 
-DOMAIN = os.getenv("FRONTEND_DOMAIN", "http://localhost:3000")
+DOMAIN = os.getenv("FRONTEND_URL", "http://localhost:3000")
 
 def create_checkout_session(user: User):
     checkout_session = stripe.checkout.Session.create(
@@ -14,7 +14,7 @@ def create_checkout_session(user: User):
         payment_method_types=["card"],
         mode="subscription",
         line_items=[{
-            "price": os.getenv("STRIPE_PRO_PRICE_ID"),
+            "price": os.getenv("STRIPE_PRICE_ID"),
             "quantity": 1,
         }],
         metadata={"user_id": user.id},
