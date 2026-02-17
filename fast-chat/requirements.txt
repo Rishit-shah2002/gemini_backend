@@ -1,0 +1,9 @@
+fastapi[standard]
+uvicorn[standard]
+redis
+pyjwt
+python-dotenv
+websockets
+pydantic-settings
+sqlalchemy
+asyncpg
